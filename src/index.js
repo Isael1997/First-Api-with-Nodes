@@ -13,13 +13,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
 //routers
-app.get('/', (req, res) => {
-    const data = {
-        "name": "Ronald",
-        "Lastname": "Sanchez"
-    }
-    res.json(data);
-});
+app.use(router);
 
 app.listen(app.set('port'), () => {
     console.log('Server on port', app.get('port'));
