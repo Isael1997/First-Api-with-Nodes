@@ -3,7 +3,7 @@ const router = Router();
 
 
 
-router.get('/', (req, res) => {
+router.get('/home', (req, res) => {
     const data = {
         "name": "Ronald",
         "Lastname": "Sanchez"

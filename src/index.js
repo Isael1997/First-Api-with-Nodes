@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const router = require("./routers/index.js");
+const routermovies = require("./routers/movies.js");
+
 
 //settings
 app.set('port', process.env.PORT || 3000);
@@ -14,6 +16,7 @@ app.use(express.json());
 
 //routers
 app.use(router);
+app.use('/api/movies', routermovies);
 
 app.listen(app.set('port'), () => {
     console.log('Server on port', app.get('port'));
